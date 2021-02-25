@@ -1,17 +1,30 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "alex-product-details-component",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-  },
-  "dependencies": {
+    "start": "node server/server.js"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "dotenv": "^8.2.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpt26-fec-phoenix/alex-product-details-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rpt26-fec-phoenix/alex-product-details-component/issues"
+  },
+  "homepage": "https://github.com/rpt26-fec-phoenix/alex-product-details-component#readme"
 }
