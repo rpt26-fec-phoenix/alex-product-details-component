@@ -13,6 +13,10 @@ const ProductTitle = mongoose.model('ProductTitle', productTitleSchema);
 
 ProductTitle.remove({}, () => console.log('cleared all rows in Product Title db'));
 
+
+const productTitleWords = process.env.PRODUCT_TITLE_WORDS.split(' ');
+console.log(`product title words split: ${JSON.stringify(productTitleWords)}`);
+
 let newListing = new ProductTitle({
   'listingId': 1,
   'productListingTitle': 'Guesthouse Great Ocean & Mountain Views near Beach'
