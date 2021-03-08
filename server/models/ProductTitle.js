@@ -57,7 +57,7 @@ if (!ProductTitle) {
 
 
     newListing.save()
-      .then(response => console.log(`created new listing: ${response}`))
+      .then(response => console.log(`created a new listing: ${response}`))
       .catch(err => console.log(`error creating new listing: ${err}`));
 
   }
