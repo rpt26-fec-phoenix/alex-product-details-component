@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 
 app.get('/productListingTitle/:productId', (req, res) => {
   productTitleDB.getProductTitleByListingId(req.params.productId)
-    .then(results => res.send(results))
+    .then(results => res.json(results[0]))
     .catch(err => res.send(err));
 
 });

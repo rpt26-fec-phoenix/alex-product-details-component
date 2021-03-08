@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const productTitleDB = 'mongodb://localhost:27017/productTitle';
+const productTitleDB = `${process.env.DB_LOCAL}/productTitle`;
 mongoose.connect(productTitleDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const productTitleSchema = new mongoose.Schema({
