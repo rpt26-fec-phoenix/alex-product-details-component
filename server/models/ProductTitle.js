@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// require('dotenv').config();
+require('dotenv').config();
 
 const productTitleDB = 'mongodb://localhost:27017/productTitle';
 mongoose.connect(productTitleDB, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -11,8 +11,7 @@ const productTitleSchema = new mongoose.Schema({
 
 const ProductTitle = mongoose.model('ProductTitle', productTitleSchema);
 
-if (!ProductTitle) {
-
+const seedProductTitleDB = () => {
   const productTitleWords = process.env.PRODUCT_TITLE_WORDS.split(' ');
 
 
@@ -63,11 +62,19 @@ if (!ProductTitle) {
   }
 }
 
+ProductTitle.find({})
+  .then(response => {
+    if (!response.length) {
+      seedProductTitleDB();
+    }
+  })
+  .catch(err => console.log(err));
 
 
 const getProductTitleByListingId = (listingId) => {
   return new Promise((resolve, reject) => {
     ProductTitle.find({ listingId: listingId }, (err, results) => {
+      console.log('results: ', results)
       if (err) {
         reject(err);
       } else {

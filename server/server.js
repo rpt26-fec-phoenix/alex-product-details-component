@@ -1,11 +1,10 @@
 const express = require('express');
 const productTitleDB = require('./models/ProductTitle');
+const path = require('path')
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('hello logged on');
-});
+app.use('/:productId', express.static(path.join(__dirname, '../public')));
 
 app.get('/productListingTitle/:productId', (req, res) => {
   productTitleDB.getProductTitleByListingId(req.params.productId)
@@ -16,3 +15,4 @@ app.get('/productListingTitle/:productId', (req, res) => {
 
 
 app.listen(3000, () => console.log('connected to server'));
+
