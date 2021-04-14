@@ -14,5 +14,5 @@ app.get('/productListingTitle/:productId', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('connected to server'));
+app.listen(3001, () => console.log('connected to server'));
 
