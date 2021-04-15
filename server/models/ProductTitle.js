@@ -42,7 +42,7 @@ const seedProductTitleDB = () => {
     let productListingTitle = [];
     let wordCount = 0;
 
-    while (wordCount < 10) {
+    while (wordCount < 6) {
       productListingTitle.push(makeTitleCase(randomWordGenerator(productTitleWords).toLowerCase()));
       wordCount++;
     }
