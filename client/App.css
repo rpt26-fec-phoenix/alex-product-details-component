@@ -38,8 +38,15 @@
 }
  */
 
+ spacers {
+   height: 100%;
+   width: fit-content;
+   align-items: center;
+ }
+
 #wrapper {
-  width: 70%;
+  width: 100%;
+  max-width: 1128px;
   height: 100%;
   margin: 0 auto;
   padding-top: 24px;
@@ -67,4 +74,3 @@
   display: table-cell;
   padding-left: 5px;
 }
-

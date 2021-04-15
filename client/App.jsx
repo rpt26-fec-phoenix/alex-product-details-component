@@ -49,8 +49,14 @@ class App extends React.Component {
                 <div className="description-individuals" id="totalReviews">
                   ({totalReviews})
                 </div>
+                <div className="spacers">
+                  <div>.</div>
+                </div>
                 <div className="description-individuals" id="superhost">
                   {!isSuperhost ? '' : 'Superhost'}
+                </div>
+                <div className="spacers">
+                  <div>.</div>
                 </div>
                 <div className="description-individuals" id="product-location">
                   {location}
